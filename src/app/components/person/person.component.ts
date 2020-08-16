@@ -8,8 +8,9 @@ import { BirthdayServiceService } from '../../services/birthday-service.service'
   styleUrls: ['./person.component.css']
 })
 export class PersonComponent implements OnInit {
-  person: Person = new Person();
-  title = 'Información sobre tu cumpleaños';
+  public person: Person = new Person();
+  public title = 'Información sobre tu cumpleaños';
+  public date;
   constructor(private birsthdayService: BirthdayServiceService) { }
 
   ngOnInit(): void {
@@ -29,6 +30,7 @@ export class PersonComponent implements OnInit {
    */
   public setBirthdayDate(value: Date) {
     this.person.birthdayDate = value.toString();
+    this.date = this.person.birthdayDate;
   }
   /**
    * Use birsthdayService to get age, how many

@@ -39,7 +39,8 @@
               class="modal-title capitalize" 
               id="exampleModalLabel">
               {{this.person.name}} &nbsp;&nbsp;</h5>
-              <h6 class="modal-title pdtop" >tienes {{this.person.age}} años</h6>
+              <h6 class="modal-title pdtop" >tienes {{this.person.age}} años &nbsp;&nbsp;</h6>
+              <h6 class="modal-title pdtop" >Fecha {{this.person.date}}</h6>
               <button 
               type="button" 
               class="close" 
@@ -53,8 +54,8 @@
                 <h4 class="center">{{title}}</h4>
                 <div *ngIf="!this.person.poems">
                   <p>
-                      Faltan {{this.person.nextBirthdayDays}} dias 
-                      y {{this.person.nextBirthdayMonths}} meses para tu cumpleaños
+                      Faltan {{this.person.nextBirthdayMonths}} meses y
+                      {{this.person.nextBirthdayDays}} dias para tu cumpleaños
                   </p> 
                 </div>
                 <div *ngIf="this.person.poems">

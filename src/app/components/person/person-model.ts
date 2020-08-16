@@ -5,4 +5,5 @@ export class Person {
   nextBirthdayDays:	number;
   nextBirthdayMonths:	number;
   poems: string;
+  date: string;
 }
