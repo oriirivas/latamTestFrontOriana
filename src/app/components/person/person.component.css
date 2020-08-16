@@ -1,0 +1,31 @@
+.card {
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-bottom: none;
+}
+
+.card-body{
+    margin-top: 10%;
+    background-color: white;
+    border-radius: 20px;
+    width: 20rem;
+    border: 3px solid beige;
+    font-family: cursive;
+}
+
+.title {
+    text-align: center;
+    font-size: 20px;
+    color: dodgerblue
+}
+
+.btn {
+    color: #007bff;
+    width: 100%;
+    background: transparent;
+}
+
+.center {
+    text-align: center;
+}

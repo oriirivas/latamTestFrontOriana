@@ -1,0 +1,71 @@
+<div class="card">
+    <div class="card-body">
+      <p class="card-text title">Ingresa tus datos y descubre</p>
+      <form>
+        <div class="form-group">
+          <label for="Name">Nombre</label>
+          <input 
+          (keyup)="setName($event.target.value)"
+          type="text"
+          class="form-control"
+          id="Name"
+          placeholder="Maria andrea perez sanchez"
+          >   
+        </div>
+        <div class="form-group">
+          <label for="dob">Fecha de Nacimiento</label>
+          <input 
+          (change)="setBirthdayDate($event.target.value)"
+          type="date" class="form-control" id="dob"
+          value="12-12-12"
+          >
+        </div>
+        <button 
+        type="button"
+        (click)="getBirthday()"
+        class="btn btn-primary"
+        data-toggle="modal" 
+        data-target="#exampleModal"
+        [disabled]="!this.person.birthdayDate || !this.person.name"
+        >Aceptar</button>
+      </form>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">{{this.person.name}} tienes {{this.person.age}} años</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h4 class="center">{{title}}</h4>
+                <div *ngIf="!this.person.poems">
+                  <p>
+                      Faltan {{this.person.nextBirthdayDays}} dias 
+                      y {{this.person.nextBirthdayMonths}} meses para tu cumpleaños
+                  </p> 
+                </div>
+                <div *ngIf="this.person.poems">
+                    <h6 class="center">Te regalamos un poema</h6>
+                    <p>
+                        {{this.person.poems}}
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button 
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+              (click)="clean()">
+              Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
