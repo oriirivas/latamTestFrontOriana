@@ -29,3 +29,10 @@
 .center {
     text-align: center;
 }
+
+.capitalize {
+    text-transform: capitalize; 
+}
+.pdtop {
+    padding-top: 1%;;
+}

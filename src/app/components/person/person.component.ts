@@ -9,7 +9,7 @@ import { BirthdayServiceService } from '../../services/birthday-service.service'
 })
 export class PersonComponent implements OnInit {
   person: Person = new Person();
-  title = 'Inforcación sobre tu cumpleaños';
+  title = 'Información sobre tu cumpleaños';
   constructor(private birsthdayService: BirthdayServiceService) { }
 
   ngOnInit(): void {
