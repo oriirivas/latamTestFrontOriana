@@ -16,7 +16,9 @@
           <label for="dob">Fecha de Nacimiento</label>
           <input 
           (change)="setBirthdayDate($event.target.value)"
-          type="date" class="form-control" id="dob"
+          type="date" 
+          class="form-control" 
+          id="dob"
           value="12-12-12"
           >
         </div>
@@ -39,7 +41,7 @@
               class="modal-title capitalize" 
               id="exampleModalLabel">
               {{this.person.name}} &nbsp;&nbsp;</h5>
-              <h6 class="modal-title pdtop" >tienes {{this.person.age}} años</h6>
+              <h6 class="modal-title pdtop" >tienes {{this.person.age}} años &nbsp;&nbsp;</h6>
               <button 
               type="button" 
               class="close" 
